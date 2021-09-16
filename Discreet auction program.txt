@@ -1,0 +1,45 @@
+Python Programming:
+
+from replit import clear
+logo = '''
+                         ___________
+                         \         /
+                          )_______(
+                          |"""""""|_.-._,.---------.,_.-._
+                          |       | | |               | | ''-.
+                          |       |_| |_             _| |_..-'
+                          |_______| '-' `'---------'` '-'
+                          )"""""""(
+                         /_________\\
+                       .-------------.
+                      /_______________\\
+'''
+print(f"{logo} \nWalcome to the secret auction program.")
+bids ={}
+def new_bid(bidder_name,new_bid):
+  bids[bidder_name] = new_bid
+
+def find_max_bid(bidding_record):
+    max_bid = 0
+    for bidder in bidding_record:
+      bid_amount = bidding_record[bidder]
+      if bid_amount > max_bid:
+        max_bid = bid_amount
+        winner = bidder
+    print(f"The winner is {winner} with a bid of {max_bid} $")    
+
+      
+
+bidders = True  
+while bidders == True:
+  Name = input("What is your name? ")
+  Bid = int(input("What is your bid? "))
+  new_bid(bidder_name = Name, new_bid = Bid)
+  more_bids = input("Are there any other bidders? Type 'yes' or 'no': \n").lower()
+  if more_bids == "no":
+    bidders = False
+    find_max_bid(bids)
+  elif more_bids == "yes":
+     clear()    
+    
+  
